@@ -1,1 +1,1 @@
-web: personalbuildhelper
+web: heroku
