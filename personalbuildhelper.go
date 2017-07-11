@@ -39,7 +39,7 @@ type Parameters struct {
 	Code         string `json:"build-source-type"`
 	BuildType    string `json:"build-type"`
 	Action       string
-	Location     string
+	Location     []string
 	AlexaMessage string
 }
 
@@ -146,9 +146,9 @@ func handleSystemClient(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		*/
-		log.Printf("Before sending bodyn")
+		log.Printf("Before sending body \n")
 		ffmChan <- body
-		log.Printf("After sending bodyn")
+		log.Printf("After sending body \n")
 		return
 	}
 	var req *request
